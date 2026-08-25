@@ -1,0 +1,16 @@
+C:\Users\mguru\OneDrive\Desktop\payflowdotnet\bin\Release\net10.0\publish\..exe
+C:\Users\mguru\OneDrive\Desktop\payflowdotnet\bin\Release\net10.0\publish\appsettings.Development.json
+C:\Users\mguru\OneDrive\Desktop\payflowdotnet\bin\Release\net10.0\publish\appsettings.json
+C:\Users\mguru\OneDrive\Desktop\payflowdotnet\bin\Release\net10.0\publish\..dll
+C:\Users\mguru\OneDrive\Desktop\payflowdotnet\bin\Release\net10.0\publish\..runtimeconfig.json
+C:\Users\mguru\OneDrive\Desktop\payflowdotnet\bin\Release\net10.0\publish\..pdb
+C:\Users\mguru\OneDrive\Desktop\payflowdotnet\bin\Release\net10.0\publish\Microsoft.EntityFrameworkCore.dll
+C:\Users\mguru\OneDrive\Desktop\payflowdotnet\bin\Release\net10.0\publish\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\mguru\OneDrive\Desktop\payflowdotnet\bin\Release\net10.0\publish\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\mguru\OneDrive\Desktop\payflowdotnet\bin\Release\net10.0\publish\Microsoft.OpenApi.dll
+C:\Users\mguru\OneDrive\Desktop\payflowdotnet\bin\Release\net10.0\publish\Npgsql.dll
+C:\Users\mguru\OneDrive\Desktop\payflowdotnet\bin\Release\net10.0\publish\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\mguru\OneDrive\Desktop\payflowdotnet\bin\Release\net10.0\publish\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\mguru\OneDrive\Desktop\payflowdotnet\bin\Release\net10.0\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\mguru\OneDrive\Desktop\payflowdotnet\bin\Release\net10.0\publish\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\mguru\OneDrive\Desktop\payflowdotnet\bin\Release\net10.0\publish\..deps.json
