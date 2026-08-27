@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 var connString=builder.Configuration.GetSection("ConnectionStrings")["DefaultConnection"];
 
-
+Console.WriteLine(connString);
 
 
 builder.Services.AddValidation();
