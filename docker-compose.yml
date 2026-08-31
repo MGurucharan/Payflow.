@@ -9,6 +9,8 @@ services:
     environment:
       POSTGRES_USER: guru
       POSTGRES_PASSWORD: gurucharan
+      ConnectionStrings:DefaultConnection: "Host=localhost;Database=guru;Username=guru;Password=gurucharan"
+      
     volumes:
       - local_pgdata:/var/lib/postgresql
     restart: always
