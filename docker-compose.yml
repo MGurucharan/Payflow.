@@ -1,15 +1,26 @@
 version: '5.5.0'
 services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    environment:
+      - ASPNETCORE_URLS=http://+80
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DatabaseConnectionString=Host=postgres;username=guru;password=gurucharan;database=guru;TrustServerCertificate=True;
+    depends_on:
+      - postgres
   postgres:
     container_name: container-pg
     image: postgres
     hostname: localhost
     ports: 
-      - "8001:5432"
+      - "5432:5432"
     environment:
       POSTGRES_USER: guru
       POSTGRES_PASSWORD: gurucharan
-      ConnectionStrings:DefaultConnection: "Host=localhost;Database=guru;Username=guru;Password=gurucharan"
       
     volumes:
       - local_pgdata:/var/lib/postgresql
