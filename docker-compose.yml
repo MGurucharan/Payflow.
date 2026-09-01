@@ -9,8 +9,7 @@ services:
     environment:
       - ASPNETCORE_URLS=http://+80
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DatabaseConnectionString=Host=postgres;username=guru;password=gurucharan;database=guru;TrustServerCertificate=True;
-    depends_on:
+      - ConnectionStrings__DatabaseConnectionString=Host=172.18.0.2;Port=5432;Username=guru;Password=gurucharan;Database=guru;TrustServerCertificate=True;
       - postgres
   postgres:
     container_name: container-pg
