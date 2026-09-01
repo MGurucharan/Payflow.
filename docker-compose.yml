@@ -1,5 +1,21 @@
 version: '5.5.0'
 services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:75"
+    environment:
+      - DB_HOST= postgres
+      - ASPNETCORE_URLS=http://+80
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DatabaseConnectionString=Host=postgres;username=guru;password=gurucharan;database=guru;TrustServerCertificate=True;
+    depends_on:
+      - postgres
+    networks:
+      - backend
+
   postgres:
     container_name: container-pg
     image: postgres
@@ -13,6 +29,8 @@ services:
     volumes:
       - local_pgdata:/var/lib/postgresql
     restart: always
+    networks:
+      - backend
 
   pgadmin:
     container_name: container-pgadmin
@@ -27,4 +45,8 @@ services:
 volumes:
   postgres-data:
   local_pgdata:
+
+networks:
+  backend:
+    driver: bridge
   
