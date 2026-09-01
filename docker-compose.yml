@@ -26,16 +26,6 @@ services:
       - local_pgdata:/var/lib/postgresql
     restart: always
 
-  pgadmin:
-    container_name: container-pgadmin
-    image: dpage/pgadmin4
-    ports:
-      - "5050:80"
-    environment:
-      PGADMIN_DEFAULT_EMAIL: user-name@domain-name.com
-      PGADMIN_DEFAULT_PASSWORD: strong-password
-    restart: always
-
 volumes:
   postgres-data:
   local_pgdata:
