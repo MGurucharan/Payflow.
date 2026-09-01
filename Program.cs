@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 var connString=builder.Configuration.GetSection("ConnectionStrings")["DefaultConnection"];
 
+Console.WriteLine($"The connection string is {connString} !\n");
 
 builder.Services.AddValidation();
 builder.Services.AddSwaggerGen();
