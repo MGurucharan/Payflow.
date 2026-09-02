@@ -5,7 +5,7 @@ using payflowdotnet.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connString=builder.Configuration.GetSection("ConnectionStrings")["DefaultConnection"];
+var connString=builder.Configuration.GetSection("ConnectionStrings")["DatabaseConnectionString"];
 
 Console.WriteLine($"The connection string is {connString} !\n");
 
