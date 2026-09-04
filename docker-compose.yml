@@ -8,7 +8,7 @@ services:
       - "8080:8080"
     environment:
       ASPNETCORE_URLS: "http://+:8080"
-      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_ENVIRONMENT: "Production"
       ConnectionStrings__DatabaseConnectionString: "Host=postgres;Port=5432;Username=guru;Password=gurucharan;Database=guru;SslMode=Disable"
     depends_on:
       - postgres
