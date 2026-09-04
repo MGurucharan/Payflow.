@@ -19,7 +19,11 @@ builder.Services.AddScoped<ICustomerService,CustomerService>();
 builder.Services.AddDbContext<PayflowContext>(option=>option.UseNpgsql(connectionString:connString).LogTo(Console.WriteLine, new[] { DbLoggerCategory.Database.Command.Name }, LogLevel.Information));
 var app = builder.Build();
 
-app.UseHttpsRedirection();
+// Only redirect HTTPS outside of Docker/container environments
+if (!app.Environment.IsDevelopment())
+{
+    app.UseHttpsRedirection();
+}
 
 app.UseAuthorization();
 app.UseSwagger();

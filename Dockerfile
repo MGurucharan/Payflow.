@@ -5,7 +5,7 @@ FROM mcr.microsoft.com/dotnet/sdk:10.0 AS base
 WORKDIR /app
 
 #telling on which port the app listens
-EXPOSE 5151
+EXPOSE 8080
 
 # Next stage to build  S2
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
