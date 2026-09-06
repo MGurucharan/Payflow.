@@ -42,7 +42,7 @@ public class Program
     {
         using (var scope = app.Services.CreateScope())
         {
-            var dbContext = scope.ServiceProvider.GetRequiredService<MyAppDbContext>();
+            var dbContext = scope.ServiceProvider.GetRequiredService<PayflowContext>();
 
             // Check and apply pending migrations
             var pendingMigrations = dbContext.Database.GetPendingMigrations();
