@@ -38,25 +38,26 @@ public class Program
         app.Run();
         ApplyMigrations(app);        
     }
-}
-
-private static void ApplyMigrations(WebApplication app)
-{
-    using (var scope = app.Services.CreateScope())
+    private static void ApplyMigrations(WebApplication app)
     {
-        var dbContext = scope.ServiceProvider.GetRequiredService<MyAppDbContext>();
+        using (var scope = app.Services.CreateScope())
+        {
+            var dbContext = scope.ServiceProvider.GetRequiredService<MyAppDbContext>();
 
-        // Check and apply pending migrations
-        var pendingMigrations = dbContext.Database.GetPendingMigrations();
-        if (pendingMigrations.Any())
-        {
-            Console.WriteLine("Applying pending migrations...");
-            dbContext.Database.Migrate();
-            Console.WriteLine("Migrations applied successfully.");
-        }
-        else
-        {
-            Console.WriteLine("No pending migrations found.");
+            // Check and apply pending migrations
+            var pendingMigrations = dbContext.Database.GetPendingMigrations();
+            if (pendingMigrations.Any())
+            {
+                Console.WriteLine("Applying pending migrations...");
+                dbContext.Database.Migrate();
+                Console.WriteLine("Migrations applied successfully.");
+            }
+            else
+            {
+                Console.WriteLine("No pending migrations found.");
+            }
         }
     }
 }
+
+
