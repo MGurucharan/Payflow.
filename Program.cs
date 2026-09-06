@@ -29,14 +29,14 @@ public class Program
         {
             app.UseHttpsRedirection();
         }
-
+        ApplyMigrations(app);   
         app.UseAuthorization();
         app.UseSwagger();
         app.UseSwaggerUI();
         // Conventional Routing :  uses a predefined route pattern
         app.MapControllers();
         app.Run();
-        ApplyMigrations(app);        
+             
     }
     private static void ApplyMigrations(WebApplication app)
     {
