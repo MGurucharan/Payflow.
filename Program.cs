@@ -6,7 +6,7 @@ namespace payflowdotnet;
 
 public class Program
 {
-    public static void Main(string[] args)
+    public static async Task Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
 
@@ -30,10 +30,14 @@ public class Program
             app.UseHttpsRedirection();
         }
 
-        var scope =app.Services.CreateScope();
-        var context=scope.ServiceProvider.GetRequiredService<PayflowContext>();
+        using (var scope=app.Services.CreateScope())
+        {
+            var context=scope.ServiceProvider.GetRequiredService<PayflowContext>(); // Getting the Bean out of the container
+        
+            await context.Database.MigrateAsync();
+        }
 
-        context.Database.MigrateAsync();
+        
 
         app.UseAuthorization();
         app.UseSwagger();
